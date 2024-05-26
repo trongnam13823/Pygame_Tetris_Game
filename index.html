@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'PressStart2P';
+            src: url('font/PressStart2P.ttf');
+        }
+
+        body {
+            font-family: 'PressStart2P';
+        }
+
+        #openWindow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body style="background-color: #f0f0f059;">
+    <div style="text-align: center; margin: 40px;">
+        <p style="font-size: 40px;margin: 40px;">
+            <span style="font-weight: bold; ;color: #FF6347;">T</span>
+            <span style="font-weight: bold; ;color: #FF7F50;">E</span>
+            <span style="font-weight: bold; ;color: #FFA500;">T</span>
+            <span style="font-weight: bold; ;color: #FFD700;">R</span>
+            <span style="font-weight: bold; ;color: #32CD32;">I</span>
+            <span style="font-weight: bold; ;color: #6495ED;">S</span>
+        </p>
+        <a href="https://trongnam13823.github.io/Pygame_Tetris_Game/build/web/" id="openWindow"
+            style="font-size: 28px; text-decoration: none; display: inline-block; transition: 0.2s;">
+            🎮 Play Game
+        </a>
+    </div>
+
+    <div style="display: flex; gap: 60px; justify-content: center; align-items: start;">
+        <div style="display: flex; justify-content: center; gap: 50px; flex-direction: column;">
+            <table style="width: 40%; border-collapse: collapse; padding: 10px; background-color: #fff;">
+                <thead>
+                    <tr>
+                        <th style="padding: 12px 40px; text-align: left; font-size: 20px;">KEY</th>
+                        <th style="padding: 12px 40px; text-align: left; font-size: 20px;">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            R
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Play/Pause
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            V
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Mute Sound
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            A
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Move Left</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            D
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Move Right
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            S
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Fall Faster
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            W
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Rotate</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-weight: bold;">
+                            F
+                        </td>
+                        <td
+                            style="padding: 12px 40px; text-align: left; border-bottom: 1px solid #ddd; font-size: 10px;">
+                            Hold</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 40px; text-align: left; font-weight: bold;">SPACE</td>
+                        <td style="padding: 12px 40px; text-align: left; font-size: 10px;">Teleport</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="https://github.com/trongnam13823/Pygame_Tetris_Game" style="font-size: 16px;">Source Code</a>
+        </div>
+
+
+        <div>
+            <img src="./image.png" width="480px" alt="Tetris Game">
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("openWindow").addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            // Tính toán kích thước của cửa sổ mới
+            var width = 640;
+            var height = 600;
+
+            // Tính toán vị trí của cửa sổ mới
+            var left = (screen.width - width) / 2;
+            var top = (screen.height - height) / 2;
+
+            // Mở cửa sổ mới
+            window.open(this.getAttribute("href"), "_blank", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+        });
+    </script>
+</body>
+
+</html>
