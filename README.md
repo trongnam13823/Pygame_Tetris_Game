@@ -1,10 +1,8 @@
-<h1 align="center">TETRIS GAME</h1>
-
-<p align="center">
+<h2 align="center">
     <a href="https://trongnam13823.github.io/Pygame_Tetris_Game" align="center">
     ➡️ Play Game on the Web ⬅️
   </a>
-</p>
+</h2>
 
 <br>
 
